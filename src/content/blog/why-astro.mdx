@@ -1,0 +1,53 @@
+---
+title: "Why We Chose Astro 5 for This Starter"
+description: "Astro 5 offers the perfect foundation for SaaS landing pages. Here's why we chose it over Next.js, Nuxt, and other frameworks."
+date: 2026-03-18
+tags: ["astro", "architecture", "performance"]
+---
+
+# Why We Chose Astro 5 for This Starter
+
+When we set out to build StarterForge, we evaluated every major web framework: Next.js, Nuxt, SvelteKit, Remix, and Astro. After careful consideration, Astro 5 emerged as the clear winner for a SaaS starter kit. Here is why.
+
+## Zero JavaScript by Default
+
+Most web frameworks ship a JavaScript runtime to the browser whether you need it or not. Astro takes the opposite approach: it ships **zero client-side JavaScript** by default. Every page is rendered to static HTML at build time, resulting in incredibly fast page loads.
+
+For a SaaS landing page -- which is primarily static content -- this is exactly what you want. Your visitors see content instantly, and your Lighthouse performance score stays at 100.
+
+## Island Architecture
+
+When you do need interactivity, Astro's island architecture lets you hydrate individual components on the page without loading a full application framework. You can mix React, Vue, Svelte, or any other UI framework -- but only where you need it.
+
+This means your landing page stays fast, while your interactive dashboard or pricing calculator can use whatever library you prefer.
+
+## Content Collections
+
+Astro 5 introduced a powerful content layer with type-safe schemas. For StarterForge's blog, we define the expected frontmatter fields (title, description, date, tags) and Astro validates every post at build time. No more runtime errors from malformed content.
+
+```typescript
+const blog = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    date: z.coerce.date(),
+    tags: z.array(z.string()).default([]),
+  }),
+});
+```
+
+If a blog post is missing a required field, the build fails with a clear error message pointing to the exact file.
+
+## View Transitions
+
+Astro 5 includes built-in View Transitions that make navigating between pages feel instant and smooth -- similar to a single-page application, but without the JavaScript overhead. StarterForge uses View Transitions out of the box, giving your site a polished, app-like feel.
+
+## Tailwind CSS v4 Integration
+
+Astro 5 works seamlessly with Tailwind CSS v4 through the `@tailwindcss/vite` plugin. There is no configuration file to maintain. Your entire theme -- colors, fonts, spacing -- is defined directly in CSS using the `@theme` directive.
+
+## Performance Where It Matters
+
+At the end of the day, a SaaS landing page needs to load fast and convert visitors. Astro delivers on both fronts. Pages load in under one second, Core Web Vitals are green across the board, and the developer experience makes iteration effortless.
+
+We believe Astro 5 is the best foundation for any content-focused web project in 2026. If you are building a SaaS product and need a landing page that performs, StarterForge gives you the head start you need.

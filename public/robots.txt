@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://starter-forge.vercel.app/sitemap-index.xml

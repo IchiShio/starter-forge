@@ -1,0 +1,85 @@
+---
+title: "Getting Started with StarterForge"
+description: "Learn how to set up your new project with StarterForge, customize the theme, and deploy your first SaaS landing page in minutes."
+date: 2026-03-20
+tags: ["guide", "astro", "tailwind"]
+---
+
+# Getting Started with StarterForge
+
+Welcome to StarterForge! This guide will walk you through everything you need to know to get your new SaaS project up and running in minutes.
+
+## Prerequisites
+
+Before you begin, make sure you have the following installed on your machine:
+
+- **Node.js 22+** -- StarterForge uses the latest Node.js features for optimal performance
+- **npm, pnpm, or yarn** -- Any modern package manager will work
+- **Git** -- For version control and deployment
+
+## Quick Start
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/your-username/starter-forge.git my-saas
+cd my-saas
+npm install
+npm run dev
+```
+
+Your development server will start at `http://localhost:4321`. Open it in your browser to see your new site.
+
+## Project Structure
+
+StarterForge follows a clean, intuitive structure:
+
+- `src/pages/` -- Your routes. Each `.astro` file becomes a page
+- `src/components/` -- Reusable UI components like Navbar, Hero, Pricing cards
+- `src/layouts/` -- Page layouts that wrap your content
+- `src/content/blog/` -- Your blog posts in MDX format
+- `src/styles/global.css` -- Global styles and Tailwind CSS v4 theme configuration
+
+## Customizing Your Theme
+
+The entire color palette is defined in `src/styles/global.css` using Tailwind CSS v4's `@theme` directive. To change the primary color from blue to, say, violet, simply update the color values:
+
+```css
+@theme {
+  --color-primary-500: #8b5cf6;
+  --color-primary-600: #7c3aed;
+  /* ...and so on */
+}
+```
+
+No separate `tailwind.config.js` file is needed. Everything lives in CSS.
+
+## Adding Blog Posts
+
+Create a new `.mdx` file in `src/content/blog/` with the required frontmatter:
+
+```mdx
+---
+title: "My First Post"
+description: "A short description for SEO and social cards."
+date: 2026-03-25
+tags: ["announcement"]
+---
+
+Your markdown content here.
+```
+
+The post will automatically appear on the blog listing page, sorted by date.
+
+## Deploying to Production
+
+StarterForge works out of the box with Vercel, Netlify, and Cloudflare Pages. For Vercel, simply connect your Git repository and it will auto-detect the Astro framework and deploy.
+
+You can also build locally and preview the production output:
+
+```bash
+npm run build
+npm run preview
+```
+
+That is it! You now have a production-ready SaaS starter. Customize the components, add your content, and ship your product.

@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About" description="Learn more about StarterForge and the team behind it.">
+  <section class="py-20 sm:py-24">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
+        About StarterForge
+      </h1>
+
+      <div class="mt-8 space-y-6 text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+        <p>
+          StarterForge was born out of frustration. Every time we started a new SaaS project,
+          we spent days -- sometimes weeks -- setting up the same foundational pieces: dark mode,
+          responsive navigation, blog infrastructure, SEO meta tags, and deployment configuration.
+        </p>
+        <p>
+          We built StarterForge to eliminate that repetitive setup work. It is a carefully crafted
+          Astro 5 starter kit that includes everything you need to launch a professional SaaS
+          landing page, complete with Tailwind CSS v4 styling, a blog powered by MDX content
+          collections, and production-ready SEO configuration.
+        </p>
+        <p>
+          Our goal is simple: help developers ship faster. Instead of spending your first sprint
+          on boilerplate, you can focus on what makes your product unique from day one.
+        </p>
+      </div>
+
+      <!-- Team section -->
+      <div class="mt-16">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Our Team</h2>
+        <div class="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
+          <div class="flex items-center gap-4">
+            <div class="h-16 w-16 shrink-0 rounded-full bg-gradient-to-br from-primary-400 to-primary-600"></div>
+            <div>
+              <p class="font-semibold text-gray-900 dark:text-white">Alex Turner</p>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Creator & Lead Developer</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="h-16 w-16 shrink-0 rounded-full bg-gradient-to-br from-emerald-400 to-teal-600"></div>
+            <div>
+              <p class="font-semibold text-gray-900 dark:text-white">Jordan Lee</p>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Design & UX</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
